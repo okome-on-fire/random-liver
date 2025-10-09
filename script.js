@@ -1,30 +1,5 @@
 $(document).ready(function() {
-    var nameList = [
-        '佐久間咲也',
-        '碓氷真澄',
-        '皆木綴',
-        '茅ヶ崎至',
-        'シトロン',
-        '卯木千景',
-        '皇天馬',
-        '瑠璃川幸',
-        '向坂椋',
-        '斑鳩三角',
-        '三好一成',
-        '兵頭九門',
-        '摂津万里',
-        '兵頭十座',
-        '七尾太一',
-        '伏見臣',
-        '古市左京',
-        '泉田莇',
-        '月岡紬',
-        '高遠丞',
-        '御影密',
-        '有栖川誉',
-        '雪白東',
-        'ガイ'
-    ];
+    var dataJson = $.getJSON('https://raw.githubusercontent.com/okome-on-fire/random-mankai/main/performance/data.json');
 
     function rangeRandom(select_num) {
         // 範囲の最小値
@@ -53,36 +28,6 @@ $(document).ready(function() {
         }
         return randomArr;
     }
-
-    // 複数人版
-    $('.s-chooseNum_button').on('click', function() {
-        $('.result_item').remove();
-
-        var select_num = $('.selectNum_area input').val();
-        var randomNumList = [];
-
-        randomNumList = rangeRandom(select_num);
-
-        var selectChara = '';
-        var tweetText = '';
-
-        $('.result_title span').text(select_num);
-
-        for(var i = 0; i < select_num; i++) {
-            selectChara = String(i+1) + '：' + nameList[randomNumList[i]];
-            resultText = '<li class="result_item"><p>' + selectChara + '</p></li>' ;
-            $('.s-resultList').append(resultText);
-            if( i == 0) {
-                tweetText += nameList[randomNumList[i]];
-            } else {
-                tweetText += ( '/' + nameList[randomNumList[i]]) ;
-            }
-
-        }
-
-        var tweet = 'ランダムで' + select_num + '人選びました。（' + tweetText + '）';
-        $('.s-tweet_button').attr('href', 'http://twitter.com/intent/tweet?url=https://okome-on-fire.github.io/random-mankai/more.html&text=' + tweet);
-    });
 
     // 一人用
     $('.s-choose_button').on('click', function() {

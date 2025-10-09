@@ -15,7 +15,7 @@ $(function() {
             $.each(members, function(_, member) {
                 const checkbox = $('<input>').attr('type', 'checkbox');
                 const label = $('<label>').text(member.name).prepend(checkbox);
-                const listItem = $('<li class="optionCheck_list">').append(label);
+                const listItem = $('<li class="optionCheck_item">').append(label);
                 memberList.append(listItem);
                 allMembers.push(members);
             });
@@ -109,7 +109,10 @@ $(function() {
 $(function() {
     $(document).on('click', '.optionCheck_head', function () {
         console.log('click');
-        $(this).next('.optionCheck_list').toggle();
+        $(this).next('.optionCheck_list').slideToggle(200);
         $(this).toggleClass('is-open');
+    });
+    $('#clear-exclusions').on('click', function() {
+        $('.optionCheck_area input[type="checkbox"]').prop('checked', false);
     });
 });

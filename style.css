@@ -1,0 +1,201 @@
+body {
+    background-color: #fff336;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+header {
+    background: #6981ff;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.main {
+    width: 95%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+.button_area {
+    text-align: center;
+}
+
+.choose_button {
+    position: relative;
+    color: #fff;
+    background: #ff386f;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 250px;
+    margin: 0 auto 20px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.choose_button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #6981ff;
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(0, 0);
+    transition: transform ease 0.4s;
+    z-index: 2;
+}
+
+.choose_button:hover::after {
+    transform: translate(-50%, -50%) scale(1.0, 1.0);
+}
+
+.choose_button span {
+    position: relative;
+    z-index: 10;
+}
+
+.result {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.result_title {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.result_text {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tweet {
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+.tweet_button {
+    display: block;
+    max-width: 200px;
+    background: #6981ff;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 0;
+    margin: 10px auto 0;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+}
+
+.tweet_button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff336;
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(0, 0);
+    transition: transform ease 0.4s;
+    z-index: 2;
+}
+
+.tweet_button span {
+    position: relative;
+    z-index: 10;
+}
+
+.tweet_button:hover {
+    color: #ff386f;
+}
+
+.tweet_button:hover::after {
+    transform: translate(-50%, -50%) scale(1.0, 1.0);
+}
+
+footer {
+    background: #6981ff;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footerLink {
+    width: 95%;
+    max-width: 700px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+    padding: 0 0 10px;
+    margin: 0 auto 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footerLink li {
+    margin: 0 5px;
+}
+
+.footerLink p {
+    display: inline;
+    color: #fff336;
+    font-weight: bold;
+}
+
+.footerLink a:hover {
+    opacity: 0.7;
+}
+
+.footerLink li:not(:first-child)::before {
+    content: "|";
+}
+
+@media screen and (max-width: 440px) {
+    header {
+        font-size: 20px;
+    }
+}
+
+/* 複数人版 */
+.selectNum_area {
+    margin: 0 auto 20px;
+}
+
+.selectNum_area input {
+    width: 100px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 2px 0 white;
+    border-radius: 2px;
+    border: 1px solid #6981ff;
+    padding: 8px 0;
+}
+
+.selectNum_sub {
+    display: inline-block;
+}
+
+.result_list {
+    width: 120px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.result_item {
+    font-weight: bold;
+}

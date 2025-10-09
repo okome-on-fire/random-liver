@@ -25,6 +25,7 @@ header {
 }
 header h1 {
     font-size: 24px;
+    font-weight: bold;
 }
 
 /* フッター */
@@ -67,20 +68,15 @@ footer p {
 .wrap-box + .wrap-box {
     margin-top: 20px;
 }
+.main-note {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
 
 /* option */
 button {
     outline: none;
-}
-.box-option {
-    border-color: #ff4642;
-}
-.box-option .main-innner-ttl {
-    background-color: #ff4642;
-}
-.tx-attention {
-    color: #ccc;
-    font-size: 12px;
 }
 .option_head {
     font-weight: bold;
@@ -90,6 +86,122 @@ button {
 }
 .optionGrp_area label + label {
     margin-left: 10px;
+}
+.optionCheck_list {
+    display: none;
+}
+.optionCheck_list li {
+    margin: 0 10px 0 0;
+    display: inline-block;
+}
+.optionCheck_list li input {
+    margin-right: 3px;
+}
+
+.optionCheck_list li:has(input:checked) {
+    color: #bbb;
+}
+.optionCheck_head {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    padding: 3px 10px 4px;
+}
+.optionCheck_head::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    transform: rotate(45deg);
+    transition: .3s;
+}
+.optionCheck_head.is-open::after {
+    transform: rotate(-135deg);
+    top: 13px;
+}
+.checkName_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.checkName_list li::after {
+    content: "｜";
+}
+
+/* 抽選ボタン */
+.clickChoose_area {
+    text-align: center;
+}
+.clickChoose_head {
+    font-size: 20px;
+    font-weight: bold;
+}
+.clickChoose_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    margin:0 auto;
+    padding: .9em 2em;
+    border: 1px solid #ffbb00;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #ffbb00;
+    font-size: 1em;
+    transition: box-shadow .3s ease;
+    font-weight: bold;
+}
+.clickChoose_btn:hover {
+    box-shadow: inset #ffbb00 0 0 0 2em;
+    color: #fff;
+}
+.team-count {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* チーム分け */
+@keyframes fadeInHighlight {
+    0% { background-color: #ffff99; opacity: 0; }
+    50% { background-color: #ffeb3b; opacity: 1; }
+    100% { background-color: transparent; }
+}
+.highlighted {
+    animation: fadeInHighlight 1.5s ease-out;
+    font-weight: bold;
+    padding-left: 8px;
+}
+#team-result {
+    padding: 10px;
+}
+.team-block {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 2px solid #333;
+}
+.team-color-0 { border-color: #e57373; } /* 赤 */
+.team-color-1 { border-color: #64b5f6; } /* 青 */
+.team-color-2 { border-color: #81c784; } /* 緑 */
+.team-color-3 { border-color: #ffb74d; } /* オレンジ */
+.team-color-4 { border-color: #ba68c8; } /* 紫 */
+.team-block h3 {
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 10px 4px;
+}
+.team-color-0 h3 { background-color: #e57373; } /* 赤 */
+.team-color-1 h3 { background-color: #64b5f6; } /* 青 */
+.team-color-2 h3 { background-color: #81c784; } /* 緑 */
+.team-color-3 h3 { background-color: #ffb74d; } /* オレンジ */
+.team-color-4 h3 { background-color: #ba68c8; } /* 紫 */
+.team-list {
+    padding: 15px;
 }
 
 /* もっと見るボタン */

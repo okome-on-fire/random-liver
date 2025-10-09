@@ -22,9 +22,9 @@
         <div class="box-option main-innner">
             <h2 class="main-innner-ttl">オプション</h2>
             <div class="wrap-box">
-                <p class="option_head">①何人で分ける？(5人まで)</p>
+                <p class="option_head">①何チームに分ける？(5チームまで)</p>
                 <div class="selectNum_area">
-                    <input type="number" name="" value="" list="select_num" min="1" max="5">
+                    <input type="number" id="team-count" name="" value="" list="select_num" min="1" max="5">
                     <datalist id="select_num">
                         <option value="1">
                         <option value="2">
@@ -32,37 +32,32 @@
                         <option value="4">
                         <option value="5">
                     </datalist>
-                    <span class="selectNum_sub">人</span>
+                    <span class="selectNum_sub">チーム</span>
                 </div>
             </div>
             <div class="wrap-box">
-                <p class="option_head">②以下のライバーの中から選ぶ</p>
-                <form>
-                    <div class="optionGrp_area">
-                        <label>
-                            <input type="checkbox" name="model" id="optionGrp01" value="jp" checked> にじさんじ
-                        </label>
-                        <label>
-                            <input type="checkbox" name="model" id="optionGrp02" value="en"> にじさんじEN
-                        </label>
-                        <label>
-                            <input type="checkbox" name="model" id="optionGrp03" value="kr"> にじさんじKR
-                        </label>
-                    </div>
-                </form>
-            </div>
-            <div class="wrap-box">
-                <p class="option_head">③以下のライバーを除く</p>
+                <p class="option_head">②以下のライバーを除く</p>
+                <p class="main-note">※既にドラフト済みのライバーを選択すると、抽選から除外されます</p>
                 <form>
                     <div class="optionCheck_area">
                     </div>
                 </form>
             </div>
+            <div class="wrap-box">
+                <button id="get-checked">チェックされたメンバーを表示</button>
+                <ul class="checkName_list">
+                </ul>
+            </div>
+        </div>
+
+        <div class="clickChoose_area">
+            <p class="clickChoose_head">＼クリックで1人抽選／</p>
+            <button class="clickChoose_btn s-choose">抽選！</button>
         </div>
 
         <div class="box-result main-innner">
-            <div>
-                <p></p>
+            <h2 class="main-innner-ttl">チーム分け</h2>
+            <div id="team-result">
             </div>
         </div>
     </div>

@@ -1,0 +1,118 @@
+/* 共通 */
+body {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3 {
+    margin: 0;
+}
+button {
+    outline: none;
+}
+ul,li {
+    list-style: none;
+    padding: 0;
+}
+
+/* ヘッダー */
+header {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background-color: #222;
+}
+header h1 {
+    font-size: 24px;
+}
+
+/* フッター */
+footer {
+    width: 100%;
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+footer p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* メイン共通 */
+.main {
+    padding: 0 10px;
+}
+.main-innner {
+    max-width: 930px;
+    margin: 30px auto;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 0 0px 20px;
+    background-color: #fff;
+    text-align: left;
+    overflow: hidden;
+}
+.main-innner-ttl {
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    background-color: #222;
+}
+.wrap-box {
+    padding: 0 20px;
+}
+.wrap-box + .wrap-box {
+    margin-top: 20px;
+}
+
+/* option */
+button {
+    outline: none;
+}
+.box-option {
+    border-color: #ff4642;
+}
+.box-option .main-innner-ttl {
+    background-color: #ff4642;
+}
+.tx-attention {
+    color: #ccc;
+    font-size: 12px;
+}
+.option_head {
+    font-weight: bold;
+}
+.selectNum_area input {
+    width: 100px;
+}
+.optionGrp_area label + label {
+    margin-left: 10px;
+}
+
+/* もっと見るボタン */
+.btn-wrap {
+    margin-top: 10px;
+}
+.btn-wrap .btn {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #222;
+    border-radius: 3px;
+    color: #222;
+    font-size: 10px;
+}
+.btn-wrap:hover .btn {
+    display: inline-block;
+    padding: 5px;
+    background-color: #222;
+    color: #fff;
+}
+.js-load {
+	display: none;
+}
+.js-load.active {
+	display: block;
+}

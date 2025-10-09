@@ -5,56 +5,70 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <title>ランダム団員表示 - ランダム用</title>
-    <link rel="stylesheet" type="text/css" href="./reset.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>甲子園用2434ランダム表示システム</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>ランダムで団員を1人表示するぜ</h1>
+        <h1>甲子園用2434ランダム表示システム</h1>
     </header>
 
     <div id="main" class="main">
-        <div class="button_area main_innner">
-            <p class="choose_button s-choose_button"><span>おす</span></p>
-        </div>
-
-        <!-- 結果表示 -->
-        <div class="result main_innner">
-            <h2 class="result_title">選ばれたのは</h2>
-            <div class="result_inner">
-                <p class="result_text s-result">XXX</p>
+        <div class="box-option main-innner">
+            <h2 class="main-innner-ttl">オプション</h2>
+            <div class="wrap-box">
+                <p class="option_head">①何人で分ける？(5人まで)</p>
+                <div class="selectNum_area">
+                    <input type="number" name="" value="" list="select_num" min="1" max="5">
+                    <datalist id="select_num">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                    </datalist>
+                    <span class="selectNum_sub">人</span>
+                </div>
+            </div>
+            <div class="wrap-box">
+                <p class="option_head">②以下のライバーの中から選ぶ</p>
+                <form>
+                    <div class="optionGrp_area">
+                        <label>
+                            <input type="checkbox" name="model" id="optionGrp01" value="jp" checked> にじさんじ
+                        </label>
+                        <label>
+                            <input type="checkbox" name="model" id="optionGrp02" value="en"> にじさんじEN
+                        </label>
+                        <label>
+                            <input type="checkbox" name="model" id="optionGrp03" value="kr"> にじさんじKR
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="wrap-box">
+                <p class="option_head">③以下のライバーを除く</p>
+                <form>
+                    <div class="optionCheck_area">
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div class="tweet">
-            <p>結果をツイートする</p>
-            <a class="tweet_button s-tweet_button" href="http://twitter.com/intent/tweet?url=https://okome-on-fire.github.io/random-mankai/&text=みわわ〜ん" target="_blank"><span>tweet</span></a>
+        <div class="box-result main-innner">
+            <div>
+                <p></p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <ul class="footerLink">
-            <li>
-                <p>団員版</p>
-            </li>
-            <li>
-                <a href="/random-mankai/more.html">団員複数人版</a>
-            </li>
-            <li>
-                <a href="/random-mankai/performance/">公演キャラ版</a>
-            </li>
-            <li>
-                <a href="/random-mankai/performance_play">公演版</a>
-            </li>
-            <li>
-                <a href="/random-mankai/circle/circle.html">適当頭アタリ</a>
-            </li>
-        </ul>
-        <p>作った人：米崎</p>
+        <p>作った人：仮な</p>
     </footer>
 </body>
 

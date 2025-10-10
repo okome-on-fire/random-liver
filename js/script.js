@@ -115,4 +115,8 @@ $(function() {
     $('#clear-exclusions').on('click', function() {
         $('.optionCheck_area input[type="checkbox"]').prop('checked', false);
     });
+    $(document).on('click', '.check-group', function() {
+        const groupClass = $(this).data('group'); // jp, en, kr
+        $(`.optionCheck_list.${groupClass} input[type="checkbox"]`).prop('checked', true);
+    });
 });

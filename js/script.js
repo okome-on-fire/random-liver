@@ -68,7 +68,10 @@ $(function() {
             `);
             resultArea.append(teamDiv);
         }
+    });
 
+    // 抽選ボタンで1人ずつ振り分け
+    $('.clickChoose_btn').on('click', function() {
         // 除外されていないメンバーを取得
         availableMembers = [];
         $('.optionCheck_area input[type="checkbox"]').each(function() {
@@ -77,10 +80,7 @@ $(function() {
                 availableMembers.push(name);
             }
         });
-    });
 
-    // 抽選ボタンで1人ずつ振り分け
-    $('.clickChoose_btn').on('click', function() {
         const remaining = availableMembers.filter(name => !assignedMembers.includes(name));
         if (remaining.length === 0) {
             alert('すべてのメンバーが振り分け済みです');

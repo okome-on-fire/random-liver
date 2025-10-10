@@ -60,8 +60,9 @@ $(function() {
         assignedMembers = [];
 
         for (let i = 0; i < teamCount; i++) {
+            const widthPercent = Math.floor(100 / teamCount); // 例：3チームなら33%
             const teamDiv = $(`
-                <div class="team-block team-color-${i}" data-team="${i}">
+                <div class="team-block team-color-${i}" data-team="${i}" style="width: ${widthPercent}%;">
                     <h3>チーム${i + 1} <span class="team-count">(0人)</span></h3>
                     <ul class="team-list"></ul>
                 </div>
@@ -97,6 +98,9 @@ $(function() {
         // 人数を更新
         const count = teamBlock.find('.team-list li').length;
         teamBlock.find('.team-count').text(`(${count}人)`);
+
+        // 抽選結果を画面に表示
+        $('.result-name .name').text(`${chosen}`);
 
         // 次のチームへ（ラウンドロビン）
         const teamCount = parseInt($('#team-count').val());

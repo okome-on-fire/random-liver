@@ -189,11 +189,15 @@ button {
 }
 #team-result {
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .team-block {
     margin-bottom: 10px;
     border-radius: 8px;
     border: 2px solid #333;
+    box-sizing: border-box;
 }
 .team-color-0 { border-color: #e57373; } /* 赤 */
 .team-color-1 { border-color: #64b5f6; } /* 青 */
@@ -212,4 +216,11 @@ button {
 .team-color-4 h3 { background-color: #ba68c8; } /* 紫 */
 .team-list {
     padding: 15px;
+}
+.result-name {
+    text-align: center;
+}
+.result-name .name {
+    font-weight: bold;
+    font-size: 18px;
 }

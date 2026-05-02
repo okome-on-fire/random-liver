@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <title>甲子園用2434ランダム表示システム</title>
+    <title>ランダムでライバーを表示するあれこれ</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -15,64 +15,41 @@
 
 <body>
     <header>
-        <h1>甲子園用2434ランダム表示システム</h1>
+        <h1>ランダムでライバーを表示するあれこれ</h1>
     </header>
 
     <div id="main" class="main">
-        <div class="box-option main-innner">
-            <h2 class="main-innner-ttl">オプション</h2>
+        <div class="main-innner">
+            <h2 class="main-innner-ttl">グループ選択</h2>
             <div class="wrap-box">
-                <p class="option_head">①何チームに分ける？(5チームまで)</p>
-                <div class="selectNum_area">
-                    <input type="number" id="team-count" name="" value="" list="select_num" min="1" max="5">
-                    <datalist id="select_num">
-                        <option value="1">
-                        <option value="2">
-                        <option value="3">
-                        <option value="4">
-                        <option value="5">
-                    </datalist>
-                    <span class="selectNum_sub">チーム</span>
-                </div>
+                <p>※チェックが付いてるライバーの中からランダムで表示します</p>
+                <div id="groupArea"></div>
             </div>
+        </div>
+        <div class="main-innner">
+            <h2 class="main-innner-ttl">メンバー選択（除外したい人のチェックを外す）</h2>
             <div class="wrap-box">
-                <p class="option_head">②以下のライバーを除く</p>
-                <p class="main-note">※既にドラフト済みのライバーを選択すると、抽選から除外されます</p>
-                <div class="clearBtn_area">
-                    <button id="clear-exclusions">チェックをすべて外す</button>
-                    <button class="check-group" data-group="jp">にじさんじを全てチェック</button>
-                    <button class="check-group" data-group="en">にじさんじENを全てチェック</button>
-                    <button class="check-group" data-group="kr">にじさんじKRを全てチェック</button>
-                </div>
-                <form>
-                    <div class="optionCheck_area">
-                    </div>
-                </form>
-            </div>
-            <div class="wrap-box">
-                <button id="get-checked">抽選から除外するライバー(ドラフト済みのライバー)を表示</button>
-                <ul class="checkName_list">
-                </ul>
+                <div id="memberArea"></div>
             </div>
         </div>
 
         <div class="clickChoose_area">
             <p class="clickChoose_head">＼クリックで1人抽選／</p>
-            <button class="clickChoose_btn s-choose">抽選！</button>
+            <button class="clickChoose_btn" id="pickBtn">抽選！</button>
         </div>
 
-        <div class="box-result main-innner">
-            <h2 class="main-innner-ttl">チーム分け</h2>
-            <div class="result-name">
-                <p>抽選ライバー：<span class="name"></span></p>
-            </div>
-            <div id="team-result">
+        <div class="main-innner result-area">
+            <h2 class="main-innner-ttl">結果表示</h2>
+            <div class="wrap-box">
+                <div id="result"></div>
+                <button id="tweetBtn">X に投稿する</button>
             </div>
         </div>
     </div>
 
     <footer>
         <p>作った人：仮な</p>
+        <p><a href="/nijiko_random.html">疑似にじさんじ甲子園ドラフト用</a></p>
     </footer>
 </body>
 

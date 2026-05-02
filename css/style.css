@@ -234,17 +234,16 @@ button {
 .member-group ul {
     list-style: none;
     padding-left: 0;
-
     display: flex;
     flex-wrap: wrap;
     gap: 8px 20px;
-
-    max-height: 0;
+    margin-top: 10px;
+    height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
 .member-group.open ul {
-    max-height: 500px;
+    height: auto;
 }
 .member-group h3 {
     cursor: pointer;

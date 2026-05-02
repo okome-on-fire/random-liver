@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const text = `【修行】\nお題：${lastWinner}\n${location.href}\n#にじさんじお絵描き修行`;
+    const text = `【修行】\nお題：${lastWinner}\n${location.href}\n#ランダム2434おえかき修行`;
 
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
 
